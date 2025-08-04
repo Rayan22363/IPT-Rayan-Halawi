@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       number.style.fontWeight = "normal";
       number.style.fontSize = "18px";
       if (i <= index) number.classList.add("active");
-
       progressIndicator.appendChild(number);
 
       if (i === index) {
@@ -106,3 +105,161 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(showNextEmployee, 3000);
 });
+
+// Directory panel GSAP (Left to Right)
+  const directoryPanel = document.getElementById("directoryPanel");
+  gsap.set(directoryPanel, { x: -350, opacity: 0, display: "none" });
+
+  document.querySelector(".direct").addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = directoryPanel.classList.contains("hidden");
+
+    if (isHidden) {
+      directoryPanel.classList.remove("hidden");
+      directoryPanel.classList.add("visible");
+      gsap.set(directoryPanel, { display: "block" });
+      gsap.to(directoryPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+    } else {
+      gsap.to(directoryPanel, {
+        x: -350,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => {
+          directoryPanel.classList.remove("visible");
+          directoryPanel.classList.add("hidden");
+          gsap.set(directoryPanel, { display: "none" });
+        },
+      });
+    }
+  });
+
+  // UpcomingPannel GSAP (Left to Right)
+  const upcomingPanel = document.getElementById("UpcomingPannel");
+  gsap.set(upcomingPanel, { x: -350, opacity: 0, display: "none" });
+
+  document.querySelector(".upcoming").addEventListener("click", function (e) {
+    e.preventDefault();
+    const isHidden = upcomingPanel.classList.contains("hidden");
+
+    if (isHidden) {
+      upcomingPanel.classList.remove("hidden");
+      upcomingPanel.classList.add("visible");
+      gsap.set(upcomingPanel, { display: "block" });
+      gsap.to(upcomingPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+    } else {
+      gsap.to(upcomingPanel, {
+        x: -350,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.in",
+        onComplete: () => {
+          upcomingPanel.classList.remove("visible");
+          upcomingPanel.classList.add("hidden");
+          gsap.set(upcomingPanel, { display: "none" });
+        },
+      });
+    }
+  });
+
+  // Close panel buttons
+  document.querySelectorAll(".close-panel").forEach((button) => {
+    button.addEventListener("click", function () {
+const panel = this.closest(".Upcoming-Pannel, .directory-panel, .Poll-Panel");
+      if (panel) {
+        gsap.to(panel, {
+          x: -350,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in",
+          onComplete: () => {
+            panel.classList.remove("visible");
+            panel.classList.add("hidden");
+            gsap.set(panel, { display: "none" });
+          },
+        });
+      }
+    });
+  });
+
+  document.getElementById("userSearch").addEventListener("input", function () {
+    const filter = this.value.toLowerCase();
+    const users = document.querySelectorAll(".user-list .user-card");
+
+    users.forEach(function (user) {
+      user.style.display = user.textContent.toLowerCase().includes(filter) ? "" : "none";
+    });
+  });
+  document.querySelectorAll(".chevron-link").forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const wrapper = this.closest(".user-wrapper");
+      const detailsPanel = wrapper.querySelector(".details-panel");
+      if (detailsPanel) {
+        detailsPanel.classList.toggle("hidden");
+      }
+    });
+  });
+
+  const links = document.querySelectorAll(".dashboard-line a");
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      links.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+const pollPanel = document.getElementById("PollPanel");
+gsap.set(pollPanel, { x: -350, opacity: 0, display: "none" });
+
+document.querySelector(".polls").addEventListener("click", function (e) {
+  e.preventDefault();
+  const isHidden = pollPanel.classList.contains("hidden");
+
+  if (isHidden) {
+    pollPanel.classList.remove("hidden");
+    pollPanel.classList.add("visible");
+    gsap.set(pollPanel, { display: "block" });
+    gsap.to(pollPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+  } else {
+    gsap.to(pollPanel, {
+      x: -350,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in",
+      onComplete: () => {
+        pollPanel.classList.remove("visible");
+        pollPanel.classList.add("hidden");
+        gsap.set(pollPanel, { display: "none" });
+      },
+    });
+  }
+});
+const pollOptions = document.querySelectorAll('.poll-option');
+let hasVoted = false;
+
+pollOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    if (hasVoted) return; 
+    hasVoted = true;
+
+    pollOptions.forEach(opt => {
+      const percent = opt.getAttribute('data-result');
+
+      const fill = document.createElement('div');
+      fill.classList.add('poll-fill-bar');
+      opt.appendChild(fill);
+
+      requestAnimationFrame(() => {
+        fill.style.width = percent + '%';
+      });
+
+      const percentSpan = document.createElement('span');
+      percentSpan.classList.add('percent');
+      percentSpan.innerText = `${percent}%`;
+      opt.appendChild(percentSpan);
+    });
+  });
+});
+
