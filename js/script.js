@@ -119,6 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
       directoryPanel.classList.add("visible");
       gsap.set(directoryPanel, { display: "block" });
       gsap.to(directoryPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+        showOverlay(); 
+
     } else {
       gsap.to(directoryPanel, {
         x: -350,
@@ -147,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
       upcomingPanel.classList.add("visible");
       gsap.set(upcomingPanel, { display: "block" });
       gsap.to(upcomingPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+              showOverlay(); 
+
     } else {
       gsap.to(upcomingPanel, {
         x: -350,
@@ -176,6 +180,8 @@ const panel = this.closest(".Upcoming-Pannel, .directory-panel, .Poll-Panel");
             panel.classList.remove("visible");
             panel.classList.add("hidden");
             gsap.set(panel, { display: "none" });
+                      hideOverlayIfNoPanelsOpen(); 
+
           },
         });
       }
@@ -222,6 +228,8 @@ document.querySelector(".polls").addEventListener("click", function (e) {
     pollPanel.classList.add("visible");
     gsap.set(pollPanel, { display: "block" });
     gsap.to(pollPanel, { x: 0, opacity: 1, duration: 0.5, ease: "power2.out" });
+            showOverlay(); 
+
   } else {
     gsap.to(pollPanel, {
       x: -350,
@@ -232,6 +240,7 @@ document.querySelector(".polls").addEventListener("click", function (e) {
         pollPanel.classList.remove("visible");
         pollPanel.classList.add("hidden");
         gsap.set(pollPanel, { display: "none" });
+        
       },
     });
   }
@@ -262,4 +271,22 @@ pollOptions.forEach(option => {
     });
   });
 });
+
+function showOverlay() {
+  const overlay = document.getElementById("PanelOverlay");
+  overlay.classList.remove("hidden");
+  overlay.classList.add("visible");
+}
+
+function hideOverlayIfNoPanelsOpen() {
+  const overlay = document.getElementById("PanelOverlay");
+  const anyPanelOpen = document.querySelector(
+    ".directory-panel.visible, .Upcoming-Pannel.visible, .Poll-Panel.visible"
+  );
+
+  if (!anyPanelOpen) {
+    overlay.classList.remove("visible");
+    overlay.classList.add("hidden");
+  }
+}
 
