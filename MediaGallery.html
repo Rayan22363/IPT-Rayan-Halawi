@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery</title>
+    <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+        <style>
+
+nav ul li .nav-link2 {
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 450;
+}
+.container2 {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.header-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+      margin-bottom: 2rem;
+
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 50px;
+  left: 55px;
+  color: white;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+.energy-section {
+ margin-bottom: 4rem;
+background-image: none;
+justify-content: center;
+margin-top: 2rem; 
+
+}
+
+.energy-header-banner-wrapper .img-header-banner-wrappers{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+
+.energy-header-banner-wrapper:hover .img-header-banner-wrappers {
+  transform: scale(1.1);
+  filter: blur(0.5px);
+}
+
+
+.energy-gallery {
+    margin-bottom: -3rem;
+    margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+    justify-content: center;
+
+}
+.energy-header-banner-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  padding: 0;
+  width: 30%;
+margin-bottom: 1rem;
+border-top: 3rem;
+border-bottom: 0.5rem;
+box-sizing: border-box;
+display: inline-block;
+vertical-align: top;
+margin-top: 0 !important;
+}
+.header-banner-wrapperimg {
+  border-radius: 0.1rem;
+  overflow: hidden;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.energy-header-banner-wrapper.alt-style .header-banner-wrapper-info {
+  position: static;
+  background: none;
+  color: black;
+  padding: 0.75rem 0 0;
+    margin-top: 0;
+  padding-top: 0.5rem;
+}
+
+.energy-header-banner-wrapper.alt-style .header-banner-wrapper-info h2 {
+  margin: 0 0 0.3125rem;
+  font-size: 1.125rem;
+  color: #000;
+  font-family: 'DIN Medium';
+}
+
+.header-banner-wrapperimg img{
+  width: 100%;
+  height: 100%;         
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.energy-header-banner-wrapper.alt-style .header-banner-wrapper-info h2::before {
+  content: none;
+}
+
+.energy-header-banner-wrapper.alt-style .header-banner-wrapper-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #444;
+} 
+
+.energy-header-banner-wrapper{
+    height: auto; 
+}
+.energy-header-banner-wrapper:hover .header-banner-wrapper-info h2{
+ transform:translateY(2px);
+}
+.energy-header-banner-wrapper:hover .header-banner-wrapper-info p{
+ transform:translateY(1px);
+}
+  
+.photo-count {
+  position: absolute;
+  top: 0.75rem;
+  right: 0;
+  background: rgba(50, 205, 50, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  font-family: 'DIN Medium';
+   z-index:2;
+}
+
+.photo-count img {
+  width: 0.875rem;
+  height: 0.875rem;
+  object-fit: contain;
+}
+.energy-header-banner-wrapper.alt-style {
+  position: relative;
+}
+@media (max-width: 600px) {
+ .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar .navbar-brand {
+    flex-grow: 1;
+  }
+
+  .navbar .navbar-toggler {
+    margin-left: auto;
+background-color:rgba(255, 255, 255, 0.7);
+
+  }
+.navbar-nav .nav-link {
+    padding-top:0;
+    padding-bottom: 0;
+    margin: 0.1rem 0;
+    font-size: 0.9rem; /* Optional: shrink font slightly */
+  }
+  .navbar-nav{
+    background-color:#1e617e2a;
+  }
+.energy-gallery {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 0; 
+    top:-2rem
+  }
+
+  .energy-header-banner-wrapper {
+    width: 90% !important;
+        margin: 0 auto 1rem auto; 
+  }
+   
+ 
+}
+       
+
+   </style>
+    <body>
+    <div class="sidebar">
+  <a href="#" class="direct"><img src="assets/media/active directory.svg" alt="" /></a>
+  <a href="#" class="upcoming"><img src="assets/media/upcoming events.svg" alt="date" /></a>
+  <a href="" class="social"><img src="assets/media/social.svg" alt="social" /></a>
+  <a href="" class="polls"><img src="assets/media/chart.svg" alt="poll" /></a>
+</div>
+
+<div id="PanelOverlay" class="panel-overlay hidden"></div>
+
+ <div id="directoryPanel" class="directory-panel hidden">
+  <h5 class="pannelheader">Group Directory Search</h5>
+  <button class="close-panel">X</button>
+
+  <div class="search-container">
+    <img src="assets/media/search-normal.svg" alt="Search" class="search-logo2" />
+    <input type="text" id="userSearch" placeholder="Search users" />
+  </div>
+
+  <div class="user-list">
+    <div class="user-wrapper">
+      <div class="user-card">
+          <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+        <div class="user-image">
+          <img src="assets/media/ellipse 20.png" alt="">
+        </div>
+        <div class="user-content">
+          <div class="user-name">
+            Jad El-Khoury
+          </div>
+          <div class="user-text">
+            Chief Operation Officer (COO)
+          </div>
+        </div>
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:JadKhoury@gmail.com">JadKhoury@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 21.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Maya Saad
+          </div>
+          <div class="user-text">
+                  Head of Marketing
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:maya.saad@gmail.com">maya.saad@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 22.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Ziad Haddad
+          </div>
+          <div class="user-text">
+            Senior Project Manager
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:ziad.haddad@gmail.com">ziad.haddad@gmail.com</a>
+  </div>
+</div>
+
+    </div>
+
+  </div> 
+</div> 
+
+<div id="UpcomingPannel" class="Upcoming-Pannel hidden">
+  <h5 class="pannelheader">Upcoming Events</h5>
+  <button class="close-panel">X</button>
+
+  <div class="Upcomingdates">
+    <div class="date-group">
+      <h6 class="event-date">JUNE 11, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+      <ul class="event-list">
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Annual Innovation Summit</div>
+  <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>9:30</strong><br>10:30</div>
+    </div>
+  </li>
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Wellness and Health Fair</div>
+       <div class="event-type"><p class="E">Event</p></div>
+      </div>
+      <div class="event-time"><strong>14:10</strong><br>16:20</div>
+    </div>
+  </li>
+    <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Monthly Lunch</div>
+        <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>18:00</strong><br>19:00</div>
+    </div>
+  </li>
+</ul>
+      </div>
+         </div>
+    </div>
+    <div class="date-group">
+      <h6 class="event-date">JUNE 20, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+         <ul class="event-list">
+ 
+  <li>
+    <div class="event-item">
+      <div class="event-info2">
+        <div class="event-name">The Prophet's Birthday</div>
+          <div class="event-type"><p class="h">Holiday</p></div>
+      </div>
+            <div class="event-time"><br><strong>All day</strong></div>
+    </div>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="PollPanel" class="Poll-Panel hidden">
+  <h5 class="pannelheader">Polls</h5>
+  <button class="close-panel">X</button>
+
+  <div class="poll-question">
+    <p>How important is the company’s focus on renewable energy and sustainability to you?</p>
+   <div class="poll-options">
+  <div class="poll-option" data-result="30">Extremely Important</div>
+  <div class="poll-option" data-result="52">Very Important</div>
+  <div class="poll-option" data-result="10">Moderately Important</div>
+  <div class="poll-option" data-result="18">Not Important</div>
+</div>
+</div>
+
+</div>
+
+
+  <section class="topbar">
+  <div class="topbar-content">
+    <a href="dash" class="dashboard-box">
+      <img src="assets/media/dashboard.svg" alt="dashboardd" class="dashboard-icon">
+    </a>
+    <div class="profile">
+      <div class="profile-line"></div>
+      <img src="assets/media/user.png" alt="Profile" class="profile-pic">
+      <div class="username-dropdown"></div>
+      <span>Ahmad Abdallah</span>
+      <a href="info">
+        <img src="assets/media/chevron.svg" alt="Dropdown Arrow" class="arrow-icon">
+      </a>
+    </div>
+  </div>
+
+</section>
+<div class="content-wrapper">
+
+  <header class="container2">
+             <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="assets/media/logo-subpage.png" alt="IPT PowerTech Logo" height="45">
+                </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link2" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="MediaGallery.html">Media Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Policies & Procedures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="DocumentTemplate.html">Document Templates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="assets/media/searchbar-icon.svg" alt="Search" class="search-logo">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+        </nav>
+<div class="header-banner-wrapper">
+  <img src="assets/media/header.jpg" alt="Header Image" class="header-banner">
+
+  <div class="banner-text">Media Gallery</div>
+</div>
+    </header>
+    
+   <!--media-->
+     <div class="container-fluid">
+
+<section class="energy-section">
+  <div class="container">
+    <div class="energy-gallery" id="masonry-grid">
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 200px;">
+          <img src="assets/media/solar-panels-roof-with-cloudy-sky-background.jpg" alt="Energy in Action" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">10</span>
+        <div class="header-banner-wrapper-info"><h2>Energy in Action</h2><p>JUNE 13, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 350px;">
+          <img src="assets/media/87100.jpg" alt="Empower Together" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">18</span>
+        <div class="header-banner-wrapper-info"><h2>Empower Together</h2><p>JUNE 9, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 190px;">
+          <img src="assets/media/all ipt services in 1 picture 2.png" alt="Power Moments" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">5</span>
+        <div class="header-banner-wrapper-info"><h2>Power Moments</h2><p>MAY 5, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 250px;">
+          <img src="assets/media/consumption based model.jpg" alt="Sustainability Initiatives" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">14</span>
+        <div class="header-banner-wrapper-info"><h2>Sustainability Initiatives</h2><p>MAY 2, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 190px;">
+          <img src="assets/media/4.png" alt="Product Launches" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">6</span>
+        <div class="header-banner-wrapper-info"><h2>Product Launches</h2><p>APRIL 27, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg">
+          <img src="assets/media/job posting square ipt powertech.png" alt="Awards & Recognition" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">22</span>
+        <div class="header-banner-wrapper-info"><h2>Awards & Recognition</h2><p>APRIL 13, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg"  style="height: 190px;">
+          <img src="assets/media/3.jpg" alt="Community Involvement" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">12</span>
+        <div class="header-banner-wrapper-info"><h2>Community Involvement</h2><p>APRIL 3, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg"  style="height: 250px;">
+          <img src="assets/media/2.jpg" alt="Partner Engagement" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">18</span>
+        <div class="header-banner-wrapper-info"><h2>Partner Engagement</h2><p>MARCH 12, 2024</p></div>
+      </div>
+
+      <div class="energy-header-banner-wrapper alt-style">
+        <div class="header-banner-wrapperimg" style="height: 300px;">
+          <img src="assets/media/rectangle 1557.jpg" alt="Office Life" class="img-header-banner-wrappers" loading="lazy">
+        </div>
+        <span class="photo-count"><img src="assets/media/album.svg" alt="album icon" loading="lazy">34</span>
+        <div class="header-banner-wrapper-info"><h2>Office Life</h2><p>MARCH 4, 2024</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+     </div>
+
+    <footer class="footer">
+  <div class="footer-text">© 2024 PowerTech. All Rights Reserved.</div>
+  <div class="social-icons">
+
+     <a href="" class="icon youtube" aria-label="youtube">
+      <img src="assets\media\youtube.svg" alt="youtube" />
+    </a>
+    <a href="" class="icon facebook" aria-label="Facebook">
+      <img src="assets\media\web.svg" alt="Facebook" />
+    </a>
+    <a href="" class="icon instagram" aria-label="Instagram">
+      <img src="assets/media/insta.svg" alt="Instagram" />
+    </a>
+    <a href="" class="icon linkedin" aria-label="linkedin">
+      <img src="assets\media\linkedin.svg" alt="linkedin" />
+    </a>
+    
+  </div>
+</footer>
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/gsap.min.js" defer></script>
+<script src="./js/ScrollTrigger.min.js" defer></script>        
+<script src="./js/jquery-3.7.1.min.js" defer></script>
+<script src="./bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="./js/masonry.pkgd.min.js" defer></script>
+<script src="./js/imagesloaded.pkgd.min.js" defer></script>
+<script src="./js/swiper-bundle.min.js" defer></script>
+<script src="./js/script.js" defer></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var grid = document.querySelector('#masonry-grid');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.energy-header-banner-wrapper',
+        columnWidth: '.energy-header-banner-wrapper',
+        gutter: 20,
+        percentPosition: true
+      });
+    });
+  });
+
+</script>
+</body>
+
+</html> 
+
+
+  
+     

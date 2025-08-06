@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resources</title>
+    <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+        <style>
+
+ nav ul li .nav-link2 {
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 450;
+}
+.container2 {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.header-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: white;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+  
+.file-list {
+  margin: auto;
+  font-family: sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+
+.file-header,
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.file-header {
+  font-weight: 300;
+  color: #555;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.file-date {
+  flex: 1;
+  text-align: left;
+  color: #555;
+  font-size: 14px;
+  margin-left: -20px;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: invert(23%) sepia(95%) saturate(2200%) hue-rotate(340deg) brightness(95%) contrast(90%);
+  transition: transform 0.2s;
+}
+
+.action-icon:hover {
+  transform: scale(1.1);
+}
+
+.actions-header {
+  width: 60px;
+}
+.divider{
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+}
+   </style>
+    <body>
+   <div class="sidebar">
+  <a href="#" class="direct"><img src="assets/media/active directory.svg" alt="" /></a>
+  <a href="#" class="upcoming"><img src="assets/media/upcoming events.svg" alt="date" /></a>
+  <a href="" class="social"><img src="assets/media/social.svg" alt="social" /></a>
+  <a href="" class="polls"><img src="assets/media/chart.svg" alt="poll" /></a>
+</div>
+
+<div id="PanelOverlay" class="panel-overlay hidden"></div>
+
+ <div id="directoryPanel" class="directory-panel hidden">
+  <h5 class="pannelheader">Group Directory Search</h5>
+  <button class="close-panel">X</button>
+
+  <div class="search-container">
+    <img src="assets/media/search-normal.svg" alt="Search" class="search-logo2" />
+    <input type="text" id="userSearch" placeholder="Search users" />
+  </div>
+
+  <div class="user-list">
+    <div class="user-wrapper">
+      <div class="user-card">
+          <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+        <div class="user-image">
+          <img src="assets/media/ellipse 20.png" alt="">
+        </div>
+        <div class="user-content">
+          <div class="user-name">
+            Jad El-Khoury
+          </div>
+          <div class="user-text">
+            Chief Operation Officer (COO)
+          </div>
+        </div>
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:JadKhoury@gmail.com">JadKhoury@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 21.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Maya Saad
+          </div>
+          <div class="user-text">
+                  Head of Marketing
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:maya.saad@gmail.com">maya.saad@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 22.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Ziad Haddad
+          </div>
+          <div class="user-text">
+            Senior Project Manager
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:ziad.haddad@gmail.com">ziad.haddad@gmail.com</a>
+  </div>
+</div>
+
+    </div>
+
+  </div> 
+</div> 
+
+<div id="UpcomingPannel" class="Upcoming-Pannel hidden">
+  <h5 class="pannelheader">Upcoming Events</h5>
+  <button class="close-panel">X</button>
+
+  <div class="Upcomingdates">
+    <div class="date-group">
+      <h6 class="event-date">JUNE 11, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+      <ul class="event-list">
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Annual Innovation Summit</div>
+  <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>9:30</strong><br>10:30</div>
+    </div>
+  </li>
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Wellness and Health Fair</div>
+       <div class="event-type"><p class="E">Event</p></div>
+      </div>
+      <div class="event-time"><strong>14:10</strong><br>16:20</div>
+    </div>
+  </li>
+    <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Monthly Lunch</div>
+        <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>18:00</strong><br>19:00</div>
+    </div>
+  </li>
+</ul>
+      </div>
+         </div>
+    </div>
+    <div class="date-group">
+      <h6 class="event-date">JUNE 20, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+         <ul class="event-list">
+ 
+  <li>
+    <div class="event-item">
+      <div class="event-info2">
+        <div class="event-name">The Prophet's Birthday</div>
+          <div class="event-type"><p class="h">Holiday</p></div>
+      </div>
+            <div class="event-time"><br><strong>All day</strong></div>
+    </div>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="PollPanel" class="Poll-Panel hidden">
+  <h5 class="pannelheader">Polls</h5>
+  <button class="close-panel">X</button>
+
+  <div class="poll-question">
+    <p>How important is the company’s focus on renewable energy and sustainability to you?</p>
+   <div class="poll-options">
+  <div class="poll-option" data-result="30">Extremely Important</div>
+  <div class="poll-option" data-result="52">Very Important</div>
+  <div class="poll-option" data-result="10">Moderately Important</div>
+  <div class="poll-option" data-result="18">Not Important</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+  <section class="topbar">
+  <div class="topbar-content">
+    <a href="dash" class="dashboard-box">
+      <img src="assets/media/dashboard.svg" alt="dashboardd" class="dashboard-icon">
+    </a>
+    <div class="profile">
+      <div class="profile-line"></div>
+      <img src="assets/media/user.png" alt="Profile" class="profile-pic">
+      <div class="username-dropdown"></div>
+      <span>Ahmad Abdallah</span>
+      <a href="info">
+        <img src="assets/media/chevron.svg" alt="Dropdown Arrow" class="arrow-icon">
+      </a>
+    </div>
+  </div>
+
+</section>
+<div class="content-wrapper">
+
+   <header class="container2">
+             <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="assets/media/logo-subpage.png" alt="IPT PowerTech Logo" height="45">
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link2" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="MediaGallery.html">Media Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Policies & Procedures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="DocumentTemplate.html">Document Templates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="assets/media/searchbar-icon.svg" alt="Search" class="search-logo">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+        </nav>
+<div class="header-banner-wrapper">
+  <img src="assets/media/hr.jpg" alt="Header Image" class="header-banner">
+  <div class="banner-text">Human Resources (HR) </div>
+</div>
+    </header>
+
+  
+<div class="file-list">
+  <div class="file-header">
+    <span>FILE NAME</span>
+    <span>DATE ADDED</span>
+    <span class="actions-header"></span>
+  </div>
+
+  <div class="file-item">
+    <div class="file-info">
+      <img src="assets/media/doc.svg" alt="DOC icon" class="file-icon">
+      <span>Onboarding Guide</span>
+    </div>
+    <span class="file-date"> 12 March, 2024</span>
+    <div class="file-actions">
+      <img src="assets/media/view.svg" alt="View" class="action-icon">
+      <div class="divider"></div>
+      <img src="assets/media/download.svg" alt="Download" class="action-icon">
+    </div>
+  </div>
+
+  <div class="file-item">
+    <div class="file-info">
+      <img src="assets/media/pdf.svg" alt="PDF icon" class="file-icon">
+      <span>HR Policies Handbook</span>
+    </div>
+    <span class="file-date"> 3 March, 2024</span>
+    <div class="file-actions">
+      <img src="assets/media/view.svg" alt="View" class="action-icon">
+            <div class="divider"></div>
+      <img src="assets/media/download.svg" alt="Download" class="action-icon">
+    </div>
+  </div>
+
+  <div class="file-item">
+    <div class="file-info">
+      <img src="assets/media/pdf.svg" alt="PDF icon" class="file-icon">
+      <span>Orientation Schedule</span>
+    </div>
+    <span class="file-date">18 February, 2024</span>
+    <div class="file-actions">
+      <img src="assets/media/view.svg" alt="View" class="action-icon">
+            <div class="divider"></div>
+      <img src="assets/media/download.svg" alt="Download" class="action-icon">
+    </div>
+  </div>
+
+  <div class="file-item">
+    <div class="file-info">
+      <img src="assets/media/doc.svg" alt="DOC icon" class="file-icon">
+      <span>Training Programs</span>
+    </div>
+    <span class="file-date">5 February, 2024</span>
+    <div class="file-actions">
+      <img src="assets/media/view.svg" alt="View" class="action-icon">
+            <div class="divider"></div>
+      <img src="assets/media/download.svg" alt="Download" class="action-icon">
+    </div>
+  </div>
+
+  <div class="file-item">
+    <div class="file-info">
+      <img src="assets/media/doc.svg" alt="DOC icon" class="file-icon">
+      <span>Health and Safety Protocols</span>
+    </div>
+    <span class="file-date">14 January, 2024</span>
+    <div class="file-actions">
+      <img src="assets/media/view.svg" alt="View" class="action-icon">
+            <div class="divider"></div>
+      <img src="assets/media/download.svg" alt="Download" class="action-icon">
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer">
+  <div class="footer-text">© 2024 PowerTech. All Rights Reserved.</div>
+  <div class="social-icons">
+
+     <a href="" class="icon youtube" aria-label="youtube">
+      <img src="assets\media\youtube.svg" alt="youtube" />
+    </a>
+    <a href="" class="icon facebook" aria-label="Facebook">
+      <img src="assets\media\web.svg" alt="Facebook" />
+    </a>
+    <a href="" class="icon instagram" aria-label="Instagram">
+      <img src="assets/media/insta.svg" alt="Instagram" />
+    </a>
+    <a href="" class="icon linkedin" aria-label="linkedin">
+      <img src="assets\media\linkedin.svg" alt="linkedin" />
+    </a>
+    
+  </div>
+</footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/TextPlugin.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/animation.js"></script>
+</body>
+
+</html> 
+
+
+  
+     

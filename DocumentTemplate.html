@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Template</title>
+    <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+        <style>
+
+ nav ul li .nav-link2 {
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: 450;
+}
+.container2 {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.header-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 15px;
+  left: 55px;
+  color: white;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+ .card {
+  width: 80%;
+  height: 180px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid #ddd;
+  margin: 0 auto; 
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-image:url(assets/media/rectangle\ 1564.jpg);
+color: inherit;
+  display: block;
+
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.folder-icon img {
+  color: #555;
+  margin-bottom: 35px;
+  width: 35px; 
+  height: auto; 
+}
+
+.card-content h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  margin-top: 20px;
+  text-decoration: none !important;
+  margin: 0;
+margin-top: 0.5rem;
+}
+
+.card-content p {
+  font-size: 12px;
+  color: #777;
+    text-decoration: none !important;
+      margin: 0;
+margin-top: 1rem;
+
+}
+.card-contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  right: 0.5rem;
+  margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar .navbar-brand {
+    flex-grow: 1;
+  }
+
+  .navbar .navbar-toggler {
+    margin-left: auto;
+background-color:rgba(255, 255, 255, 0.7);
+
+  }
+.navbar-nav .nav-link {
+    padding-top:0;
+    padding-bottom: 0;
+    margin: 0.1rem 0;
+    font-size: 0.9rem; /* Optional: shrink font slightly */
+  }
+  .navbar-nav{
+    background-color:#1e617e2a;
+  }
+    .card-contain{
+  width:100%;
+  padding-right:0.5rem;
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    }
+  
+  .card {
+    min-width: 90% !important;
+    width: 100% !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    height: auto;
+  }
+
+  .card img {
+    width: 5rem !important;
+    height: 5rem !important;
+    object-fit: contain !important;
+    margin-bottom: 2rem;
+  }
+
+  .card .card-content {
+    padding: 1rem 0 !important;
+    width: 100%;
+    color: black;
+    text-align: left;
+  }
+
+  .card .card-content h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+ .card .card-content p {
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+
+ 
+}
+       
+
+
+        </style>
+    <body>
+    <div class="sidebar">
+  <a href="#" class="direct"><img src="assets/media/active directory.svg" alt="" /></a>
+  <a href="#" class="upcoming"><img src="assets/media/upcoming events.svg" alt="date" /></a>
+  <a href="" class="social"><img src="assets/media/social.svg" alt="social" /></a>
+  <a href="" class="polls"><img src="assets/media/chart.svg" alt="poll" /></a>
+</div>
+<div id="PanelOverlay" class="panel-overlay hidden"></div>
+
+ <div id="directoryPanel" class="directory-panel hidden">
+  <h5 class="pannelheader">Group Directory Search</h5>
+  <button class="close-panel">X</button>
+
+  <div class="search-container">
+    <img src="assets/media/search-normal.svg" alt="Search" class="search-logo2" />
+    <input type="text" id="userSearch" placeholder="Search users" />
+  </div>
+
+  <div class="user-list">
+    <div class="user-wrapper">
+      <div class="user-card">
+          <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+        <div class="user-image">
+          <img src="assets/media/ellipse 20.png" alt="">
+        </div>
+        <div class="user-content">
+          <div class="user-name">
+            Jad El-Khoury
+          </div>
+          <div class="user-text">
+            Chief Operation Officer (COO)
+          </div>
+        </div>
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:JadKhoury@gmail.com">JadKhoury@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 21.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Maya Saad
+          </div>
+          <div class="user-text">
+                  Head of Marketing
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:maya.saad@gmail.com">maya.saad@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 22.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Ziad Haddad
+          </div>
+          <div class="user-text">
+            Senior Project Manager
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:ziad.haddad@gmail.com">ziad.haddad@gmail.com</a>
+  </div>
+</div>
+
+    </div>
+
+  </div> 
+</div> 
+
+<div id="UpcomingPannel" class="Upcoming-Pannel hidden">
+  <h5 class="pannelheader">Upcoming Events</h5>
+  <button class="close-panel">X</button>
+
+  <div class="Upcomingdates">
+    <div class="date-group">
+      <h6 class="event-date">JUNE 11, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+      <ul class="event-list">
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Annual Innovation Summit</div>
+  <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>9:30</strong><br>10:30</div>
+    </div>
+  </li>
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Wellness and Health Fair</div>
+       <div class="event-type"><p class="E">Event</p></div>
+      </div>
+      <div class="event-time"><strong>14:10</strong><br>16:20</div>
+    </div>
+  </li>
+    <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Monthly Lunch</div>
+        <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>18:00</strong><br>19:00</div>
+    </div>
+  </li>
+</ul>
+      </div>
+         </div>
+    </div>
+    <div class="date-group">
+      <h6 class="event-date">JUNE 20, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+         <ul class="event-list">
+ 
+  <li>
+    <div class="event-item">
+      <div class="event-info2">
+        <div class="event-name">The Prophet's Birthday</div>
+          <div class="event-type"><p class="h">Holiday</p></div>
+      </div>
+            <div class="event-time"><br><strong>All day</strong></div>
+    </div>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="PollPanel" class="Poll-Panel hidden">
+  <h5 class="pannelheader">Polls</h5>
+  <button class="close-panel">X</button>
+
+  <div class="poll-question">
+    <p>How important is the company’s focus on renewable energy and sustainability to you?</p>
+   <div class="poll-options">
+  <div class="poll-option" data-result="30">Extremely Important</div>
+  <div class="poll-option" data-result="52">Very Important</div>
+  <div class="poll-option" data-result="10">Moderately Important</div>
+  <div class="poll-option" data-result="18">Not Important</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+  <section class="topbar">
+  <div class="topbar-content">
+    <a href="dash" class="dashboard-box">
+      <img src="assets/media/dashboard.svg" alt="dashboardd" class="dashboard-icon">
+    </a>
+    <div class="profile">
+      <div class="profile-line"></div>
+      <img src="assets/media/user.png" alt="Profile" class="profile-pic">
+      <div class="username-dropdown"></div>
+      <span>Ahmad Abdallah</span>
+      <a href="info">
+        <img src="assets/media/chevron.svg" alt="Dropdown Arrow" class="arrow-icon">
+      </a>
+    </div>
+  </div>
+
+</section>
+<div class="content-wrapper">
+
+   <header class="container2">
+             <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="assets/media/logo-subpage.png" alt="IPT PowerTech Logo" height="45">
+                </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link2" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="MediaGallery.html">Media Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Policies & Procedures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="DocumentTemplate.html">Document Templates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2" href="#">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="assets/media/searchbar-icon.svg" alt="Search" class="search-logo">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+        </nav>
+<div class="header-banner-wrapper">
+  <img src="assets/media/06.jpg" alt="Header Image" class="header-banner">
+
+  <div class="banner-text">Document Template</div>
+</div>
+    </header>
+    
+    
+<div class="container-fluid">  
+
+    <div class="card-contain">
+  <!-- Card 1 -->
+ <a class="card" href="HumanResources.html" >
+  <div class="folder-icon" href="HumanResources.html"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Human Resources (HR)</h3>
+    <p>5 Files</p>
+  </div>
+ </a>
+<!-- Card 2 -->
+ <div class="card">
+ <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Finance&Accounting</h3>
+    <p>12 Files</p>
+  </div>
+</div>
+<!-- Card 3 -->
+ <div class="card">
+  <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Information Technology (IT)</h3>
+    <p>3 Files</p>
+  </div>
+</div>
+
+<!-- Card 4 -->
+ <div class="card">
+  <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Customer Service </h3>
+    <p>7 Files</p>
+  </div>
+</div>
+
+<!-- Card 5 -->
+ <div class="card">
+ <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Legal&Compliance </h3>
+    <p>6 Files</p>
+  </div>
+</div>
+
+<!-- Card 6 -->
+ <div class="card">
+   <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Marketing</h3>
+    <p>16 Files</p>
+  </div>
+</div>
+<!-- Card 7 -->
+ <div class="card">
+  <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Administrative Sevices</h3>
+    <p>9 Files</p>
+  </div>
+</div>
+<!-- Card 8 -->
+ <div class="card">
+  <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Field Sevices </h3>
+    <p>5 Files</p>
+  </div>
+</div>
+<!-- Card 9 -->
+ <div class="card">
+  <div class="folder-icon"><img src="assets/media/folder-2.svg" alt=""></div>
+  <div class="card-content">
+    <h3>Supply Chain </h3>
+    <p>5 Files</p>
+  </div>
+</div>
+</div>
+    
+
+</div>
+
+    <footer class="footer">
+  <div class="footer-text">© 2024 PowerTech. All Rights Reserved.</div>
+  <div class="social-icons">
+
+     <a href="" class="icon youtube" aria-label="youtube">
+      <img src="assets\media\youtube.svg" alt="youtube" />
+    </a>
+    <a href="" class="icon facebook" aria-label="Facebook">
+      <img src="assets\media\web.svg" alt="Facebook" />
+    </a>
+    <a href="" class="icon instagram" aria-label="Instagram">
+      <img src="assets/media/insta.svg" alt="Instagram" />
+    </a>
+    <a href="" class="icon linkedin" aria-label="linkedin">
+      <img src="assets\media\linkedin.svg" alt="linkedin" />
+    </a>
+    
+  </div>
+</footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/TextPlugin.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/animation.js"></script>
+</body>
+
+</html> 
+
+
+  
+     

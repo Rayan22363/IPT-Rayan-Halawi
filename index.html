@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPT PowerTech</title>
+  <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+ <link rel="preload" href="assets/fonts/din-bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/din-medium.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/din-regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<div>
+<div class="sidebar">
+  <a href="#" class="direct"><img src="assets/media/active directory.svg" alt="" /></a>
+  <a href="#" class="upcoming"><img src="assets/media/upcoming events.svg" alt="date" /></a>
+  <a href="" class="social"><img src="assets/media/social.svg" alt="social" /></a>
+  <a href="" class="polls"><img src="assets/media/chart.svg" alt="poll" /></a>
+</div>
+
+<div id="PanelOverlay" class="panel-overlay hidden"></div>
+ <div id="directoryPanel" class="directory-panel hidden">
+  <h5 class="pannelheader">Group Directory Search</h5>
+  <button class="close-panel">X</button>
+
+  <div class="search-container">
+    <img src="assets/media/search-normal.svg" alt="Search" class="search-logo2" />
+    <input type="text" id="userSearch" placeholder="Search users" />
+  </div>
+
+  <div class="user-list">
+    <div class="user-wrapper">
+      <div class="user-card">
+          <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+        <div class="user-image">
+          <img src="assets/media/ellipse 20.png" alt="">
+        </div>
+        <div class="user-content">
+          <div class="user-name">
+            Jad El-Khoury
+          </div>
+          <div class="user-text">
+            Chief Operation Officer (COO)
+          </div>
+        </div>
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:JadKhoury@gmail.com">JadKhoury@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 21.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Maya Saad
+          </div>
+          <div class="user-text">
+                  Head of Marketing
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:maya.saad@gmail.com">maya.saad@gmail.com</a>
+  </div>
+</div>
+    </div>
+    <div class="user-wrapper">
+      <div class="user-card">
+                  <img src="assets/media/Why-backg.png" class="card-bg-overlay" alt="">
+
+        <div class="user-image">
+          <img src="assets/media/ellipse 22.png" alt="">
+        </div>
+
+        <div class="user-content">
+          <div class="user-name">
+            Ziad Haddad
+          </div>
+          <div class="user-text">
+            Senior Project Manager
+          </div>
+        </div>
+
+        <a href="#" class="chevron-link">
+          <img src="assets/media/chevron.svg" alt="Chevron">
+        </a>
+      </div>
+<div class="details-panel hidden">
+  <div class="info-row">
+    <span class="label">Mobile:</span>
+    <span class="value phone">+961 01 234 567</span>
+  </div>
+  <div class="info-row">
+    <span class="label">Email:</span>
+    <a class="value email" href="mailto:ziad.haddad@gmail.com">ziad.haddad@gmail.com</a>
+  </div>
+</div>
+
+    </div>
+
+  </div> 
+</div> 
+
+
+<div id="UpcomingPannel" class="Upcoming-Pannel hidden">
+  <h5 class="pannelheader">Upcoming Events</h5>
+  <button class="close-panel">X</button>
+
+  <div class="Upcomingdates">
+    <div class="date-group">
+      <h6 class="event-date">JUNE 11, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+      <ul class="event-list">
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Annual Innovation Summit</div>
+  <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>9:30</strong><br>10:30</div>
+    </div>
+  </li>
+  <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Wellness and Health Fair</div>
+       <div class="event-type"><p class="E">Event</p></div>
+      </div>
+      <div class="event-time"><strong>14:10</strong><br>16:20</div>
+    </div>
+  </li>
+    <li>
+    <div class="event-item">
+      <div class="event-info">
+        <div class="event-name">Monthly Lunch</div>
+        <div class="event-type"><p class="E">Event</p></div>
+      </div>
+          <div class="event-time"><strong>18:00</strong><br>19:00</div>
+    </div>
+  </li>
+</ul>
+      </div>
+         </div>
+    </div>
+    <div class="date-group">
+      <h6 class="event-date">JUNE 20, 2024</h6>
+      <div class="event-wrapper">
+      <div class="event-card">
+         <ul class="event-list">
+ 
+  <li>
+    <div class="event-item">
+      <div class="event-info2">
+        <div class="event-name">The Prophet's Birthday</div>
+          <div class="event-type"><p class="h">Holiday</p></div>
+      </div>
+            <div class="event-time"><br><strong>All day</strong></div>
+    </div>
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="PollPanel" class="Poll-Panel hidden">
+  <h5 class="pannelheader">Polls</h5>
+  <button class="close-panel">X</button>
+
+  <div class="poll-question">
+    <p>How important is the company’s focus on renewable energy and sustainability to you?</p>
+   <div class="poll-options">
+  <div class="poll-option" data-result="30">Extremely Important</div>
+  <div class="poll-option" data-result="52">Very Important</div>
+  <div class="poll-option" data-result="10">Moderately Important</div>
+  <div class="poll-option" data-result="18">Not Important</div>
+</div>
+</div>
+</div>
+
+
+  <section class="topbar">
+  <div class="topbar-content">
+    <a href="dash" class="dashboard-box">
+      <img src="assets/media/dashboard.svg" alt="dashboardd" class="dashboard-icon">
+    </a>
+    <div class="profile">
+      <div class="profile-line"></div>
+      <img src="assets/media/user.png" alt="Profile" class="profile-pic">
+      <div class="username-dropdown"></div>
+      <span>Ahmad Abdallah</span>
+      <a href="info">
+        <img src="assets/media/chevron.svg" alt="Dropdown Arrow" class="arrow-icon">
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<div class="content-wrapper">
+ <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/media/logo.png" alt="IPT PowerTech Logo" height="45">
+                </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MediaGallery.html">Media Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Policies & Procedures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DocumentTemplate.html">Document Templates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vacancies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="assets/media/search-normal.svg" alt="Search" class="search-logo">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+         <div class="alert-container">
+          <a href="your-target-link.html" aria-label="Click here">
+            <img src="assets/media/alert.svg" class="alert" /></a>
+                </div>
+        </nav>
+        
+    </header>
+    <!-- Hero Section -->
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <section class="swiper-slide hero">
+                <div class="overlay">
+                    <h1 class="slide-header" id="spice">Pioneering Telecom, Power, and Automotive Innovations for a
+                        better Future</h1>
+                </div>
+                <img src="assets/media/banner1.png" alt="Banner 1" class="slide-image">
+            </section>
+
+            <!-- Slide 2 -->
+            <section class="swiper-slide hero">
+                <div class="overlay">
+                    <h1 class="slide-header" id="spice2">Pioneering Telecom, Power, and Automotive Innovations for a
+                        better Future</h1>
+                </div>
+                <img src="assets/media/banner2.jpg" alt="Banner 2" class="slide-image">
+            </section>
+
+            <!-- Slide 3 -->
+            <section class="swiper-slide hero">
+                <div class="overlay">
+                    <h1 class="slide-header" id="spice3">Pioneering Telecom, Power, and Automotive Innovations for a
+                        better Future</h1>
+                </div>
+                <img src="assets/media/banner3.jpg" alt="Banner 3" class="slide-image">
+            </section>
+        </div>
+
+        <div class="range-slider">
+            <input type="range" min="0" max="3" step="0.01" class="slider" id="time-range">
+            <div class="slider-thumb">
+                <div class="tooltip">
+
+                </div>
+            </div>
+            <div id="progress-indicator" class="progress-indicator"></div>
+
+        </div>
+
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+    </div>
+
+  <section class="latest-news">
+   <div class="latest-news-content">
+
+    <section class="col-lg-8">
+
+ <div class="news">
+  <div class="news-header">
+    <h1 style="font-size: 2rem;">Latest <span class="red">News</span></h1>
+      <h4 class="red"><a href="">All News</a></h4>
+    </a>
+  </div>
+<hr>
+  <ul class="news-list">
+
+    <div class="news-item">
+      <div class="news-image">
+        <img src="assets/media/consumption based model.jpg" alt="News Image">
+      </div>
+      <div class="news-content">
+        <div class="news-date">
+          <img src="assets/media/date.svg" alt="Date Icon">
+          <small>June 11, 2024</small>
+        </div>
+        <div class="news-text">
+          Subsidiary Delivers Solutions for Lebanon’s Mobile Network
+        </div>
+      </div>
+       <div class="news-cta ms-3">
+          <a href="#" class="cta-link">
+              <img src="assets/media/news-cta.svg" class="cta-img default" alt="Read More" loading="lazy">
+              <img src="assets/media/news-cta-active.svg" class="cta-img active" alt="Read More Active" loading="lazy">
+          </a>
+        </div>
+    </div>
+<hr>
+    <div class="news-item">
+      <div class="news-image">
+        <img src="assets/media/banner2.jpg" alt="News Image">
+      </div>
+      <div class="news-content">
+        <div class="news-date">
+          <img src="assets/media/date.svg" alt="Date Icon">
+          <small>June 5, 2024</small>
+        </div>
+        <div class="news-text">
+          Prefabricated Telecom Data Centre Modules Tested in Croatia
+        </div>
+      </div>
+       <div class="news-cta ms-3">
+          <a href="#" class="cta-link">
+              <img src="assets/media/news-cta.svg" class="cta-img default" alt="Read More" loading="lazy">
+              <img src="assets/media/news-cta-active.svg" class="cta-img active" alt="Read More Active" loading="lazy">
+          </a>
+        </div>
+    </div>
+<hr>
+    <div class="news-item">
+      <div class="news-image">
+        <img src="assets/media/solar-panels-roof-with-cloudy-sky-background.jpg" alt="News Image">
+      </div>
+      <div class="news-content">
+        <div class="news-date">
+          <img src="assets/media/date.svg" alt="Date Icon">
+          <small>May 25, 2024</small>
+        </div>
+        <div class="news-text">
+          Showcasing hybrid Solutions for MNOs and TowerCos in Kenya!
+        </div>
+      </div>
+     <div class="news-cta ms-3">
+          <a href="#" class="cta-link">
+              <img src="assets/media/news-cta.svg" class="cta-img default" alt="Read More" loading="lazy">
+              <img src="assets/media/news-cta-active.svg" class="cta-img active" alt="Read More Active" loading="lazy">
+          </a>
+        </div>
+    </div>
+  </ul>
+</div>
+    </section>
+
+    <section class="col-lg-4">
+<div class="welcome">
+            <div class="dots-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="employee">
+
+                <div class="image-container">
+                    <img src="assets/media/ellipse 278.png" alt="Ellipse Image" class="ellipse-image">
+                    <img src="assets/media/outer.svg" alt="back Image" class="back-image">
+                    <div class="text-container">
+                        <h2 class="h22">Welcome</h2>
+                        <h2 class="text-center  mb-1">NIJAD NASSER</h2>
+                        <p>OPERATION DIRECTOR</p>
+                        <p class="empP2">&mdash;At IPT PowerTech&mdash;</p>
+                        <button>Read More</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="employee">
+                <div class="image-container">
+                    <img src="assets/media/ellipse 21.png" alt="Ellipse Image" class="ellipse-image">
+                    <img src="assets/media/outer.svg" alt="back Image" class="back-image">
+                    <div class="text-container">
+                        <h2 class="h22">Welcome</h2>
+                        <h2 class="text-center  mb-1">Rayan Halawi</h2>
+                        <p>OPERATION DIRECTOR</p>
+                        <p class="empP2">&mdash;At IPT PowerTech&mdash;</p>
+                        <button>Read More</button>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+    </section>
+   </div>
+  </section>
+
+
+<div class="story" >
+<div class="Title">
+    <h1>Capturing Our Energy <br>
+    Story With <span class="red">Excellence
+    </span>
+    <img src="assets/media/deco.svg" alt="Icon" class="inline-icon" /></h1>
+</div>
+    <section class="col-lg-4">
+
+<div class="Storyparg">
+<p>At the heart of our journey is a commitment to excellence<br>
+We continuously evolve, leveraging advanced technologies<br>and creative solutions to shape our unique 
+energy story<br>Through forward-thinking strategies.</p>
+</div>
+    </section>
+<div class="card-fluid">
+    <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card" style="height: 30rem;">
+      <img src="assets/media/solar-panels-roof-with-cloudy-sky-background.jpg" alt="Main" class="Main"/>
+       <img src="assets/media/Why-backg.png" alt="Overlay" class="overlay-img" />
+       <a href="#" class="album">
+                            <img src="assets/media/album.svg" alt="">
+                            <span class="number">10</span>
+                        </a>
+      <div class="card-info">
+        <h2>Energy in Action</h2>
+        <p>June 13, 2024</p>
+      </div>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="card" style="height: 20rem; margin-top: 2rem;"  >
+      <img src="assets/media/87100.jpg" alt="Main" class="Main"/>
+      <img src="assets/media/Why-backg.png" alt="Overlay" class="overlay-img"  class="Main" />
+      <a href="#" class="album">
+                            <img src="assets/media/album.svg" alt="">
+                            <span class="number">4</span>
+                        </a>
+      <div class="card-info">
+        <h2>Empower Together</h2>
+          <p>June 9, 2024</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="height: 25rem; margin-top: 1rem;">
+      <img src="assets/media/all ipt services in 1 picture 2.png" alt="Main"  class="Main" />
+      <img src="assets/media/Why-backg.png" alt="Overlay" class="overlay-img" />
+      <a href="#" class="album">
+                            <img src="assets/media/album.svg" alt="">
+                            <span class="number">1</span>
+                        </a>
+      <div class="card-info">
+        <h2>Power Moments</h2>
+          <p>May 5, 2024</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="view-btn-wrapper mt-4 b custom-align-right c ">
+                <button class="btn btn-danger bred">View All</button>
+            </div>
+</div>
+ 
+</div>
+
+
+<footer class="footer">
+  <div class="footer-text">© 2024 PowerTech. All Rights Reserved.</div>
+  <div class="social-icons">
+
+     <a href="" class="icon youtube" aria-label="youtube">
+      <img src="assets\media\youtube.svg" alt="youtube" />
+    </a>
+    <a href="" class="icon facebook" aria-label="Facebook">
+      <img src="assets\media\web.svg" alt="Facebook" />
+    </a>
+    <a href="" class="icon instagram" aria-label="Instagram">
+      <img src="assets/media/insta.svg" alt="Instagram" />
+    </a>
+    <a href="" class="icon linkedin" aria-label="linkedin">
+      <img src="assets\media\linkedin.svg" alt="linkedin" />
+    </a>
+    
+  </div>
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.js"></script>
+ <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/TextPlugin.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/animation.js"></script>
+
+<script>
+  const swiper = new Swiper('.hero-slider', {
+    loop: true,                 
+    speed: 400,                 
+    autoplay: {
+      delay: 7000,               
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
