@@ -1006,20 +1006,21 @@ padding-top: 5rem;
   padding: 10px;
   border-radius: 5px;
   margin-top: 2rem;
+  padding-left: 3.8rem;
 }
 .Title .inline-icon {
   position: absolute;
   width: 3.125rem;
   height: 1.5rem;
   top: 3.5rem;
-  left: 25.5rem;
+  left: 28.5rem;
 }
 
 .Storyparg {
   font-size: 1rem;
   position: absolute;
   top: 80px;        
-  right: 0;          
+  right: 3rem;          
   padding: 20px;
   line-height: 2;   
   text-align: left;
