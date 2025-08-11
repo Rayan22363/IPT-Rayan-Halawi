@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-  // Your code here
-  gsap.registerPlugin(TextPlugin);
-  gsap.to('.btn',{
-    rotation:360,
-    duration:2
-  });
+
 
 gsap.from(".navbar-nav .nav-item", {
   y: -20,
@@ -44,13 +39,7 @@ gsap.from(".news-item", {
   ease: "power2.out",
   stagger: 0.3 // delays between each item
 });
-gsap.to(".news-cta img", {
-  y: 3,
-  repeat: -1,
-  yoyo: true,
-  duration: 0.8,
-  ease: "power1.inOut"
-});
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,3 +90,4 @@ gsap.utils.toArray(".image-card, .image-card2, .image-card3").forEach(card => {
     ease: "power2.out"
   });
 });
+
