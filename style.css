@@ -1030,7 +1030,7 @@ margin-left: 5rem;
 
 .card {
   position: relative;   
-  width: 22rem;
+  width: 20rem;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1619,4 +1619,5 @@ border-bottom-left-radius: 0.2rem;
 .close-panel:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 
