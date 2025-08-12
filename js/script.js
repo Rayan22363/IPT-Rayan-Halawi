@@ -290,3 +290,102 @@ function hideOverlayIfNoPanelsOpen() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('albumModal');
+  const modalImage = modal.querySelector('.modal-image');
+  const modalTitle = modal.querySelector('.modal-title');
+  const closeBtn = modal.querySelector('.close-btn');
+  const prevBtn = modal.querySelector('.prev-btn');
+  const nextBtn = modal.querySelector('.next-btn');
+  const imageCounter = modal.querySelector('.image-counter');
+
+  const albums = [
+    {
+      title: "Energy in Action",
+      images: [
+        "assets/media/solar-panels-roof-with-cloudy-sky-background.jpg",
+        "assets/media/3.jpg",
+        "assets/media/2.jpg",
+      ]
+    },
+    {
+      title: "Empower Together",
+      images: [
+        "assets/media/87100.jpg",
+        "assets/media/3.jpg",
+        "assets/media/consumption based model.jpg",
+      ]
+    },
+    {
+      title: "Power Moments",
+      images: [
+        "assets/media/all ipt services in 1 picture 2.png",
+        "assets/media/3.jpg",
+        "assets/media/2.jpg",
+      ]
+    }
+  ];
+
+  let currentAlbumIndex = 0;
+  let currentImageIndex = 0;
+
+  const albumLinks = document.querySelectorAll('.album');
+
+  albumLinks.forEach((albumLink, index) => {
+    albumLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentAlbumIndex = index;
+      currentImageIndex = 0;
+      openModal();
+    });
+  });
+
+  function updateModalImage() {
+  const album = albums[currentAlbumIndex];
+  modalImage.src = album.images[currentImageIndex];
+  const paddedNumber = String(currentImageIndex + 1).padStart(2, '0');
+  imageCounter.textContent = paddedNumber;
+}
+
+
+  function openModal() {
+    const album = albums[currentAlbumIndex];
+    modalTitle.textContent = album.title;
+    updateModalImage();
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  function showNext() {
+    const album = albums[currentAlbumIndex];
+    currentImageIndex = (currentImageIndex + 1) % album.images.length;
+    updateModalImage();
+  }
+
+  function showPrev() {
+    const album = albums[currentAlbumIndex];
+    currentImageIndex = (currentImageIndex - 1 + album.images.length) % album.images.length;
+    updateModalImage();
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+
+  const prevBg = modal.querySelector('.prev-bg');
+const nextBg = modal.querySelector('.next-bg');
+
+function updateModalImage() {
+  const album = albums[currentAlbumIndex];
+  modalImage.src = album.images[currentImageIndex];
+
+  // Zero-padded number
+  const paddedNumber = String(currentImageIndex + 1).padStart(2, '0');
+  imageCounter.textContent = paddedNumber;
+}
+
+});
