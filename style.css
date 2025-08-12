@@ -1172,6 +1172,113 @@ transform: scale(1.2);
       padding-bottom: 1rem;
       padding-top:0;
 }
+.album-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+
+}
+
+.album-modal.hidden {
+  display: none;
+}
+
+.album-modal-content {
+  position: relative;
+  width: 60vw;
+  max-width: 900px;
+  text-align: center;
+  color: #333;
+}
+
+.modal-title {
+  margin-bottom: 1rem;
+  font-weight:normal;
+  font-size: 2rem;
+  color: #000;
+  
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper {
+ width: 25rem;      
+  height: 17rem;  
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  left:11rem
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+
+
+.nav-btn:hover,
+.close-btn:hover {
+  background: none !important;
+}
+.nav-btn img {
+  width: 4rem;
+  height: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 53rem;
+  font-size: 2.5rem;
+  color: #333;
+    background: none !important;
+  border: none;
+  line-height: 1;
+  font-weight: bold;
+}
+
+
+.image-counter {
+  position: absolute;
+  bottom: 8px;
+  left: 1rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 5;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    background: none !important;
+
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -1619,5 +1726,6 @@ border-bottom-left-radius: 0.2rem;
 .close-panel:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 
