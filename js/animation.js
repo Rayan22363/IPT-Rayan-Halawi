@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-
+  
 
 gsap.from(".navbar-nav .nav-item", {
   y: -20,
@@ -31,37 +31,35 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".news-item", {
   scrollTrigger: {
     trigger: ".news",
-    start: "top 80%", // when the top of .news hits 80% of viewport
+    start: "top 80%", 
   },
   y: 50,
   opacity: 0,
   duration: 1,
   ease: "power2.out",
-  stagger: 0.3 // delays between each item
+  stagger: 0.3 
 });
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Swiper
 const swiper = new Swiper('.hero-slider', {
-    loop: true, // Keep looping slides
+    loop: true, 
     autoplay: {
-        delay: 5000, // 3 seconds per slide
+        delay: 5000, 
     },
     on: {
         slideChangeTransitionStart: function () {
-            // Get current active slide's header
             const activeSlide = document.querySelector('.swiper-slide-active .slide-header');
             
             if (activeSlide) {
                 gsap.fromTo(activeSlide,
-                    { y: 50, opacity: 0 }, // Start state: slide in from bottom, fade in
+                    { y: 50, opacity: 0 }, 
                     {
                         y: 0,
                         opacity: 1,
-                        duration: 3, // animation duration
-                        ease: "power2.out" // easing function
+                        duration: 3, 
+                        ease: "power2.out" 
                     });
             }
         }
@@ -91,3 +89,41 @@ gsap.utils.toArray(".image-card, .image-card2, .image-card3").forEach(card => {
   });
 });
 
+//modal
+function animateModalOpen(modalEl) {
+  gsap.fromTo(modalEl,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+}
+
+//img
+function animateImageWrapper(wrapperEl) {
+  gsap.fromTo(wrapperEl,
+    { opacity: 0, scale: 0.95 },
+    { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }
+  );
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById('albumModal');
+  const modalImage = modal?.querySelector('.modal-image');
+  const imageWrapper = modal?.querySelector('.image-wrapper');
+  const albumLinks = document.querySelectorAll('.card');
+
+  if (!modal || !modalImage || !imageWrapper) return;
+
+  const observer = new MutationObserver(() => {
+    animateImageWrapper(imageWrapper);
+  });
+  observer.observe(modalImage, { attributes: true, attributeFilter: ['src'] });
+
+  albumLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      setTimeout(() => {
+        animateModalOpen(modal);
+        animateImageWrapper(imageWrapper);
+      }, 50); // wait a bit so src updates first
+    });
+  });
+});
