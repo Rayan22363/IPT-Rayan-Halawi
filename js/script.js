@@ -306,6 +306,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "assets/media/solar-panels-roof-with-cloudy-sky-background.jpg",
         "assets/media/3.jpg",
         "assets/media/2.jpg",
+        "assets/media/87100.jpg",
+        "assets/media/3.jpg",
+        "assets/media/consumption based model.jpg",
+        "assets/media/2.jpg",
+         "assets/media/87100.jpg",
+        "assets/media/3.jpg",
+        "assets/media/consumption based model.jpg",
+
       ]
     },
     {
@@ -314,14 +322,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "assets/media/87100.jpg",
         "assets/media/3.jpg",
         "assets/media/consumption based model.jpg",
+                "assets/media/2.jpg",
+
       ]
     },
     {
       title: "Power Moments",
       images: [
-        "assets/media/all ipt services in 1 picture 2.png",
         "assets/media/3.jpg",
-        "assets/media/2.jpg",
       ]
     }
   ];
@@ -329,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentAlbumIndex = 0;
   let currentImageIndex = 0;
 
-  const albumLinks = document.querySelectorAll('.album');
+  const albumLinks = document.querySelectorAll('.card');
 
   albumLinks.forEach((albumLink, index) => {
     albumLink.addEventListener('click', (e) => {
@@ -353,10 +361,12 @@ document.addEventListener('DOMContentLoaded', () => {
     modalTitle.textContent = album.title;
     updateModalImage();
     modal.classList.remove('hidden');
+
   }
 
   function closeModal() {
     modal.classList.add('hidden');
+
   }
 
   function showNext() {
@@ -383,9 +393,16 @@ function updateModalImage() {
   const album = albums[currentAlbumIndex];
   modalImage.src = album.images[currentImageIndex];
 
+
   // Zero-padded number
   const paddedNumber = String(currentImageIndex + 1).padStart(2, '0');
   imageCounter.textContent = paddedNumber;
 }
 
+
 });
+
+
+
+
+
