@@ -5,15 +5,19 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'DIN';
   src: url('assets/fonts/DIN-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
+
 nav .fa{
   display: none;
 }
+
+
 @media (max-width:1150px) {
   .alerts{
     size: 10px;
@@ -291,26 +295,22 @@ margin-right: 3.2rem;
     width: 60%;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-
   }
-
   .socials {
     padding-right: 0;
     justify-content: flex-start;
     gap: 0.5rem;
   }
-
   .socials a {
     width: 2.5rem;
     height: 2.5rem;
   }
-
   .socials img {
     width: 1.2rem;
     height: 1.2rem;
   }
-  
 }
+
 
 }
 
@@ -353,7 +353,7 @@ margin-right: 3.2rem;
 .topbar {
   margin-bottom: 0;
    position: fixed;         
-  z-index: 11200;
+  z-index: 1000;
   width: 100%;
   font-family: 'DIN', sans-serif;
   font-weight: lighter;
@@ -790,6 +790,7 @@ height: 6rem;
   width: 6rem;
   height: 6rem;
 }
+
 .news-content {
   flex: 1;
   padding: 0 0.75rem;
@@ -993,9 +994,8 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-padding-top: 5rem;
- background-image: url(assets/media/media-sectionbg.jpg);
- 
+  padding-top: 5rem;
+  background-image: url(assets/media/media-sectionbg.jpg);
 }
 
 .story .h1 {
@@ -1005,7 +1005,7 @@ padding-top: 5rem;
   z-index: 15; 
   border-radius: 5px;
   margin-top: 2rem;
-margin-left: 5rem;
+  margin-left: 5rem;
 }
 
 .story .inline-icon {
@@ -1057,7 +1057,7 @@ margin-left: 5rem;
 
 
 }
-.energy-card:hover .card-info {
+.card:hover .card-info {
   opacity: 1;
 }
 
@@ -1172,6 +1172,7 @@ transform: scale(1.2);
       padding-bottom: 1rem;
       padding-top:0;
 }
+
 .album-modal {
   position: fixed;
   top: 0;
@@ -1182,12 +1183,14 @@ transform: scale(1.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 20000; /* much higher than topbar */
   overflow: hidden;
   transition: opacity 0.3s ease;
-    backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+    pointer-events: auto; /* ensure clicks are captured */
 
 }
+
 
 .album-modal.hidden {
   display: none;
@@ -1199,6 +1202,8 @@ transform: scale(1.2);
   max-width: 900px;
   text-align: center;
   color: #333;
+  z-index: 20001; /* above the overlay */
+
 }
 
 .modal-title {
@@ -1206,7 +1211,6 @@ transform: scale(1.2);
   font-weight:normal;
   font-size: 2rem;
   color: #000;
-  
 }
 
 .image-wrapper {
@@ -1221,7 +1225,7 @@ transform: scale(1.2);
   height: 17rem;  
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  left:11rem
+  left:11rem;
 }
 
 .image-wrapper img {
@@ -1231,29 +1235,35 @@ transform: scale(1.2);
   object-fit: cover;  
 }
 
-
 .nav-btn:hover,
 .close-btn:hover {
   background: none !important;
+
+transform: scale(1.2);
+
 }
 .nav-btn img {
   width: 4rem;
   height: auto;
 }
 
+
+
+
+
 .close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 53rem;
+  top: -3rem;   
+  right: -14rem; 
   font-size: 2.5rem;
   color: #333;
-    background: none !important;
+  background: none !important;
   border: none;
   line-height: 1;
   font-weight: bold;
+  cursor: pointer;
+  z-index: 20; 
 }
-
 
 .image-counter {
   position: absolute;
@@ -1279,6 +1289,12 @@ transform: scale(1.2);
     background: none !important;
 
 }
+
+
+
+
+
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -1485,7 +1501,7 @@ box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border: 1px solid #dcdcdc;
   overflow: hidden;
-  z-index: 1; /* base layer */
+  z-index: 1; 
   background-color: white;
 
 }
@@ -1495,10 +1511,10 @@ box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This ensures the image fills the card */
-  opacity: 2; /* Slight transparency so content is readable */
-  z-index: 0; /* Send it behind the content */
-  pointer-events: none; /* Prevent interaction */
+  object-fit: cover; 
+  opacity: 2; 
+  z-index: 0; 
+  pointer-events: none;
 }
 .user-image,
 .user-content,
@@ -1727,5 +1743,8 @@ border-bottom-left-radius: 0.2rem;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+
+                    
 
 
