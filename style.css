@@ -1219,13 +1219,17 @@ transform: scale(1.2);
   align-items: center;
   justify-content: center;
 }
-
 .image-wrapper {
- width: 25rem;      
-  height: 17rem;  
+  position: relative;
+  width: 25rem;
+  height: 17rem;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  left:11rem;
+  overflow: visible; /* allow previews */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;   /* centers wrapper under the title */
 }
 
 .image-wrapper img {
@@ -1746,5 +1750,6 @@ border-bottom-left-radius: 0.2rem;
 
 
                     
+
 
 
