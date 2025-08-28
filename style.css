@@ -1225,12 +1225,11 @@ transform: scale(1.2);
   height: 17rem;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  overflow: visible; /* allow previews */
+  overflow: visible; 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;   /* centers wrapper under the title */
-}
+  margin: 0 auto;  
 
 .image-wrapper img {
   border-radius: 10px;
@@ -1750,6 +1749,7 @@ border-bottom-left-radius: 0.2rem;
 
 
                     
+
 
 
 
